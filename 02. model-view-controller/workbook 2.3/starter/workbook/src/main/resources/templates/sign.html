@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Traffic Sign</title>
+        <style>
+            img{
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Speed: <span th:text="${speed}"></span></h1>
+        <img src="images/slow-down.png" alt="" th:if="${speed} > 60 ">
+        <img src="images/speed-limit.png" alt="" th:if="${speed} <= 60 "> 
+    </body>
+</html>

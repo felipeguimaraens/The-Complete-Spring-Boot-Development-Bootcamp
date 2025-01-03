@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Shows</title>
+    </head>
+    <body>
+        <h2>IMDB: Top 5 Episodes</h2>
+        <table id="table"  width="100%", border="solid">
+          <tr>
+            <th>Title</th>
+            <th>Episode</th>
+            <th>Rating</th>
+          </tr>
+          <!-- TASK 3:
+          <tr>
+            <td th:text="${show.title}"></td>
+            <td th:text="${show.episode}"></td>
+            <td th:text="${show.rating}"></td>
+          </tr>
+          <tr>
+            <td th:text="${show1.title}"></td>
+            <td th:text="${show1.episode}"></td>
+            <td th:text="${show1.rating}"></td>
+          </tr>
+          <tr>
+            <td th:text="${show2.title}"></td>
+            <td th:text="${show2.episode}"></td>
+            <td th:text="${show2.rating}"></td>
+          </tr>
+          <tr>
+            <td th:text="${show3.title}"></td>
+            <td th:text="${show3.episode}"></td>
+            <td th:text="${show3.rating}"></td>
+          </tr>
+          <tr>
+            <td th:text="${show4.title}"></td>
+            <td th:text="${show4.episode}"></td>
+            <td th:text="${show4.rating}"></td>
+          </tr> 
+          -->
+            <tr th:object="${show}">
+            <td th:text="*{title}"></td>
+            <td th:text="*{episode}"></td>
+            <td th:text="*{rating}"></td>
+          </tr>
+          <tr th:object="${show1}">
+            <td th:text="*{title}"></td>
+            <td th:text="*{episode}"></td>
+            <td th:text="*{rating}"></td>
+          </tr>
+          <tr th:object="${show2}">
+            <td th:text="*{title}"></td>
+            <td th:text="*{episode}"></td>
+            <td th:text="*{rating}"></td>
+          </tr>
+          <tr th:object="${show3}">
+            <td th:text="*{title}"></td>
+            <td th:text="*{episode}"></td>
+            <td th:text="*{rating}"></td>
+          </tr>
+          <tr th:object="${show4}">
+            <td th:text="*{title}"></td>
+            <td th:text="*{episode}"></td>
+            <td th:text="*{rating}"></td>
+          </tr>
+          
+
+        </table>        
+    </body>
+</html>
