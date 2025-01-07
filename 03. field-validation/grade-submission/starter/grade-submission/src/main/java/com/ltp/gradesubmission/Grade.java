@@ -2,13 +2,19 @@ package com.ltp.gradesubmission;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotBlank;
+
+
 public class Grade {
+    @NotBlank(message = "Custom message for name blank")
     private String name;
+    @NotBlank
     private String subject;
+    @NotBlank
     private String score;
     private String id;
 
-
+    
     public Grade() {
         this.id = UUID.randomUUID().toString();
     }
